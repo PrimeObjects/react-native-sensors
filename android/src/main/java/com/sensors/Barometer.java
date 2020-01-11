@@ -66,6 +66,11 @@ public class Barometer extends ReactContextBaseJavaModule implements SensorEvent
     return "Barometer";
   }
 
+ @Override    
+  public boolean canOverrideExistingModule() {        
+    return true;    
+  }
+  
   // SensorEventListener Interface
   private void sendEvent(String eventName, @Nullable WritableMap params) {
     try {

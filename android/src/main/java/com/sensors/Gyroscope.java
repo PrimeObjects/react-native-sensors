@@ -65,6 +65,11 @@ public class Gyroscope extends ReactContextBaseJavaModule implements SensorEvent
     return "Gyroscope";
   }
 
+   @Override    
+  public boolean canOverrideExistingModule() {        
+    return true;    
+  }
+
   // SensorEventListener Interface
   private void sendEvent(String eventName, @Nullable WritableMap params) {
     try {

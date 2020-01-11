@@ -66,6 +66,11 @@ public class Magnetometer extends ReactContextBaseJavaModule implements SensorEv
     return "Magnetometer";
   }
 
+   @Override    
+  public boolean canOverrideExistingModule() {        
+    return true;    
+  }
+
   // SensorEventListener Interface
   private void sendEvent(String eventName, @Nullable WritableMap params) {
     try {

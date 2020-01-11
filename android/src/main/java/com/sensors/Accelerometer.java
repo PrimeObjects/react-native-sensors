@@ -66,6 +66,11 @@ public class Accelerometer extends ReactContextBaseJavaModule implements SensorE
     return "Accelerometer";
   }
 
+   @Override    
+  public boolean canOverrideExistingModule() {        
+    return true;    
+  }
+
   // SensorEventListener Interface
   private void sendEvent(String eventName, @Nullable WritableMap params) {
     try {
